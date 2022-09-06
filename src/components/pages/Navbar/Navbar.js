@@ -1,13 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import withUserContext from "../../hoc/withUserContext/";
+import { NavBarDiv } from "./StyledComp";
 
-function Navbar() {
+function Navbar({ isAuth, setIsAuth }) {
+  let navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate("/login");
+  };
+
   return (
-    <div>
+    <NavBarDiv>
       <Link to="/">Home</Link>
-      <Link to="/login">Login</Link>
-      <Link to="/main">Main</Link>
-    </div>
+      {!isAuth && <Link to="/login">Login</Link>}
+      {/* <Link to="/main">Main</Link> */}
+      {isAuth && <button onClick={handleLogout}>Logout</button>}
+    </NavBarDiv>
   );
 }
 
-export default Navbar;
+export default withUserContext(Navbar);

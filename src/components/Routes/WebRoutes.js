@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home/";
 import Login from "../pages/Login/";
 import Main from "../pages/Main/";
 
@@ -9,9 +8,17 @@ function WebRoutes() {
       <div className="links">
         {/* <BrowserRouter> */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Main />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/main" element={<Main />} />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+          {/* <Route path="/main" element={<Main />} /> */}
         </Routes>
         {/* </BrowserRouter> */}
       </div>
