@@ -6,6 +6,7 @@ import style from './Main.module.css';
 import { DebounceInput } from 'react-debounce-input';
 import WeatherContext from '../../Context/WeatherContext';
 import LocationContext from '../../Context/LocationContext';
+import ItemListener from '../ItemListener';
 
 function Main({ setIsAuth }) {
   let navigate = useNavigate();
@@ -21,10 +22,9 @@ function Main({ setIsAuth }) {
     // eslint-disable-next-line
   }, []);
 
-
   useEffect(() => {
     recentCityList = JSON.parse(localStorage.getItem('recentCities'));
-    if (recentCityList !== null && recentCityList.length >0) {
+    if (recentCityList !== null && recentCityList.length > 0) {
       setRecentCity(recentCityList);
     }
     if (
@@ -34,8 +34,7 @@ function Main({ setIsAuth }) {
       setRecentCity([locationValue, ...recentCity]);
     }
 
-   
-    recentCity.length >= 5 && 
+    recentCity.length >= 5 &&
       localStorage.setItem(
         'recentCities',
         JSON.stringify(recentCity.slice(0, 5)),
@@ -68,10 +67,11 @@ function Main({ setIsAuth }) {
             </div>
           </div>
         </div>
+        {console.log(daysData)}
         <div className={style.details}>
           details:{locationValue.name} <hr />
           {daysData.map(item => (
-            <div key={item.dt}>{item.humidity}</div>
+            <ItemListener item={item} key={item.dt} />
           ))}
         </div>
       </MainContaierDiv>
