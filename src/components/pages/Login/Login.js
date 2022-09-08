@@ -7,6 +7,7 @@ function LoginPage() {
   const { isAuth, setIsAuth } = useContext(GlobalContext);
   const [user, setUser] = useState({ username: "", password: "" });
   let navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const LoggedUser = JSON.parse(localStorage.getItem("user"));
@@ -21,6 +22,7 @@ function LoginPage() {
   }, [isAuth]);
 
   const handleChange = (e) => {
+    setErrorMessage("");
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
@@ -29,6 +31,10 @@ function LoginPage() {
       setIsAuth(true);
       const locaStorageUser = JSON.stringify({ ...user, isAuth: true });
       localStorage.setItem("user", locaStorageUser);
+      setErrorMessage("");
+    }
+    else {
+      setErrorMessage("Invalid username or password");
     }
   };
 
@@ -52,7 +58,7 @@ function LoginPage() {
           />
         </InputDiv>
         <button onClick={handleLogin}>Login!</button>
-        <div id="error"></div>
+        <div id="error">{errorMessage}</div>
       </ContainerDiv>
     </div>
   );

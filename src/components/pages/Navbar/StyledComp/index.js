@@ -14,7 +14,7 @@ export const Header = styled.div`
 export const NavBarDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   & > a {
