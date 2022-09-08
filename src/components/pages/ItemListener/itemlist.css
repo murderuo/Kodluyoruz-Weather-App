@@ -1,13 +1,13 @@
 .list-item {
-  display: block;
-  border: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   /* text-align: justify; */
 }
 .list-item div {
   display: inline;
   margin: 0 10px;
-  width: 20%;
+  /* width: 20%; */
   /* border: 1px solid #ccc; */
 
 }

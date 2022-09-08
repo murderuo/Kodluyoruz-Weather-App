@@ -1,8 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import withUserContext from '../../hoc/withUserContext/';
-import { MainContaierDiv } from './StyledComp';
-import style from './Main.module.css';
+import {
+  CitysDiv,
+  DetailsDiv,
+  InputDiv,
+  ListItemDiv,
+  MainContaierDiv,
+  RecentCityItem,
+  RecentCityList,
+} from './StyledComp';
 import { DebounceInput } from 'react-debounce-input';
 import WeatherContext from '../../Context/WeatherContext';
 import LocationContext from '../../Context/LocationContext';
@@ -45,35 +52,37 @@ function Main({ setIsAuth }) {
   return (
     <div>
       <MainContaierDiv>
-        <div className={style.citys}>
-          <div className={style.input}>
+        <CitysDiv>
+          <InputDiv>
             <label>Search City:</label>
             <DebounceInput
               debounceTimeout={500}
               onChange={e => setLocation(e.target.value)}
               value={location}
             />
-          </div>
-          <div className={style.recentCity}>
-            <h3>Recent City</h3>
-            <div className="">
+          </InputDiv>
+          <InputDiv>
+            <h3>Recent Citys</h3>
+            <RecentCityList>
               {recentCity.slice(0, 5)?.map((city, index) => (
-                <div key={index} className={style.recentCityItem}>
+                <RecentCityItem key={index}>
                   <label>
-                    {city.name} <span>City Temp</span>
+                    {city.name} <span>sıcaklıkburaya</span>
                   </label>
-                </div>
+                </RecentCityItem>
               ))}
-            </div>
-          </div>
-        </div>
-        {console.log(daysData)}
-        <div className={style.details}>
-          details:{locationValue.name} <hr />
-          {daysData.map(item => (
-            <ItemListener item={item} key={item.dt} />
-          ))}
-        </div>
+            </RecentCityList>
+          </InputDiv>
+        </CitysDiv>
+        {/* {console.log(daysData)} */}
+        <DetailsDiv>
+          <label>{locationValue.name}</label>
+          <ListItemDiv>
+            {daysData.map(item => (
+              <ItemListener item={item} key={item.dt} />
+            ))}
+          </ListItemDiv>
+        </DetailsDiv>
       </MainContaierDiv>
     </div>
   );
