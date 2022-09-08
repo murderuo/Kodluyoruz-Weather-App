@@ -22,8 +22,8 @@ function Portal({ isOpen, setIsOpen, portalCity }) {
   if (!isOpen) return null;
   return createPortal(
     <PortalDiv>
-        {JSON.stringify(daysData[0])}
-      {/* <h2>{portalCity.name}</h2>
+        {/* {JSON.stringify(daysData[0])} */}
+      {/* {/* <h2>{portalCity.name}</h2> */}
       <img
         src={`http://openweathermap.org/img/wn/${daysData[0].weather[0].icon}@2x.png`}
         alt=""
@@ -35,7 +35,7 @@ function Portal({ isOpen, setIsOpen, portalCity }) {
       <label>{daysData[0].feels_like.day}°C</label>
       <label>hava durumu:</label>
       <label>{daysData[0].weather[0]?.description}</label>
-      <button onClick={() => setIsOpen(false)}>Close</button> */}
+      <button onClick={() => setIsOpen(false)}>Close</button>
     </PortalDiv>,
     document.getElementById("portal")
   );

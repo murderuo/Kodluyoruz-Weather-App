@@ -56,7 +56,7 @@ function Main({ setIsAuth }) {
   }, [locationValue]);
 
   const handleOpenPortal = (item) => {
-    setIsOpen(true);
+    setIsOpen(!isOpen);
     setPortalCity(item);
   };
 
@@ -77,7 +77,11 @@ function Main({ setIsAuth }) {
             <RecentCityList>
               {recentCity.slice(0, 5)?.map((city, index) => (
                 <RecentCityItem key={index}>
-                  <label onClick={() => handleOpenPortal(city.name)}>
+                  <label 
+                  // onClick={() => handleOpenPortal(city.name)}
+                   onMouseMove={() => handleOpenPortal(city.name)}
+                  //  onMouseLeave={() => handleOpenPortal(city.name)}
+                  >
                     {city.name} <span>{daysData[index]?.temp?.day}</span>
                   </label>
                 </RecentCityItem>
