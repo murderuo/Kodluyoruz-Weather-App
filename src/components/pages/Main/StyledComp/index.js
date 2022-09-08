@@ -7,11 +7,6 @@ export const MainContaierDiv = styled.div`
   width: 70%;
   border: 1px solid;
   background-color: #eee3cb;
-  /* flex: 1; */
-  /* flex-flow: row wrap; */
-  /* flex-flow: column wrap;
-  flex: auto; */
-
 `;
 
 export const CitysDiv = styled.div`
@@ -20,7 +15,6 @@ export const CitysDiv = styled.div`
   padding: 5px;
   width: 30%;
   height: 100%;
-  
 `;
 
 export const InputDiv = styled.div`
@@ -60,10 +54,12 @@ export const RecentCityList = styled.div`
 export const RecentCityItem = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+
+  /* justify-content: space-around; */
+
   font-family: sans-serif;
   border-bottom: 1px solid;
-  width: 100%;
+
   & > label::before {
     content: '> ';
   }
@@ -97,14 +93,13 @@ export const DetailsDiv = styled.div`
 `;
 
 export const ListItemDiv = styled.div`
- display: flex;
- flex: 1;
+  display: flex;
+  flex: 1;
   flex-flow: row wrap;
 
- /* width: 70%; */
+  /* width: 70%; */
   /* flex-direction: row; */
-
- `
+`;
 
 export const ListItemCardDiv = styled.div`
   display: flex;

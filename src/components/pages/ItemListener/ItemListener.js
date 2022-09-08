@@ -1,4 +1,4 @@
-import { ListItemCardDiv, ListItemDiv } from '../Main/StyledComp/';
+import { ListItemCardDiv } from '../Main/StyledComp/';
 
 function ItemListener({ item }) {
   const convertDate = stamp => {
