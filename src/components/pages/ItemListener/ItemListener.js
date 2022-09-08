@@ -22,14 +22,14 @@ function ItemListener({ item }) {
         src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
         alt=""
       ></img>
-      <div className="date">
+      <label>
         {convertDate(item.dt)}
-      </div>
-      <div className="temp">Gün içi sıcaklık:{item.temp.day}°C</div>
-      <div className="hissedilen">Hissedilen sıcaklık:{item.feels_like.day}°C</div>
-      <div className="havaDurumu">
+      </label>
+      <label>Gün içi sıcaklık:{item.temp.day}°C</label>
+      <label>Hissedilen sıcaklık:{item.feels_like.day}°C</label>
+      <label>
         hava durumu:{item.weather[0].description}
-      </div>
+      </label>
     </ListItemCardDiv>
   );
 }
