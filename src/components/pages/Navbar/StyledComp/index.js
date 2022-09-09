@@ -14,18 +14,29 @@ export const Header = styled.div`
 export const NavBarDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: flex-start; */
   align-items: center;
 
   & > a {
     text-decoration: none;
     color: #000;
     margin: 0 10px;
+    padding: 5px;
     font-family: sans-serif;
   }
 `;
 
+export const ButtonsDiv = styled.div`
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* align-self: flex-end; */
+  margin-left: auto;
+`;
+
 export const Button = styled.button`
+  /* display: flex; */
+  /* align-self: flex-end; */
+
   padding: 5px;
   border-radius: 2px;
   cursor: pointer;

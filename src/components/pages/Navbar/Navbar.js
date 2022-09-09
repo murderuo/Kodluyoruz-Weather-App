@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import withUserContext from '../../hoc/withUserContext/';
-import { Button, Header, NavBarDiv } from './StyledComp';
+import { Button, ButtonsDiv, Header, NavBarDiv } from './StyledComp';
 // import NavbarStyle from './navbar.module.css';
 
 function Navbar({ isAuth, setIsAuth }) {
@@ -16,11 +16,11 @@ function Navbar({ isAuth, setIsAuth }) {
       <NavBarDiv>
         <Link to="/">Home</Link>
         {!isAuth && <Link to="/login">Login</Link>}
-        {/* <Link to="/main">Main</Link> */}
         {isAuth && (
-          <div>
+          <ButtonsDiv>
             <Button onClick={handleLogout}>Logout</Button>
-          </div>
+            {/* <button onClick={handleLogout}>Logout</button> */}
+          </ButtonsDiv>
         )}
       </NavBarDiv>
     </Header>

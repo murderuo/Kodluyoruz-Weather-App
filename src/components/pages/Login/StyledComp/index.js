@@ -21,9 +21,10 @@ export const ContainerDiv = styled.div`
 export const InputDiv = styled.div`
   display: flex;
   flex-direction: row;
-  flex:1;
+  /* flex:1 ; */
+  flex-wrap: wrap;
   width:40%;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   /* justify-content: right; */
   margin: 10px;

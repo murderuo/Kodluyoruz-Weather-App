@@ -79,7 +79,7 @@ function Main({ setIsAuth }) {
                 <RecentCityItem key={index}>
                   <label 
                   // onClick={() => handleOpenPortal(city.name)}
-                   onMouseMove={() => handleOpenPortal(city.name)}
+                   onClick={() => handleOpenPortal(city.name)}
                   //  onMouseLeave={() => handleOpenPortal(city.name)}
                   >
                     {city.name} <span>{daysData[index]?.temp?.day}</span>

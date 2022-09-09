@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MainContaierDiv = styled.div`
   display: flex;
   position: relative;
-  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 auto;
   width: 70%;
   border: 1px solid;
@@ -13,15 +13,21 @@ export const MainContaierDiv = styled.div`
 export const CitysDiv = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 30%;
+  /* flex-flow: column; */
+  flex-grow: 1;
+  /* flex-shrink: 0; */
+  /* flex-wrap: wrap; */
   padding: 5px;
-  width: 30%;
-  height: 100%;
+  border: 1px solid;
 `;
 
 export const InputDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* flex-wrap: wrap; */
   padding: 10px;
   /* border-bottom: 1px solid rgb(0, 0, 0); */
   margin-bottom: 10px;
@@ -62,7 +68,7 @@ export const RecentCityItem = styled.div`
   font-size: 20px;
 
   & > label::before {
-    content: "> ";
+    content: '> ';
   }
 
   & > label > span {
@@ -71,7 +77,7 @@ export const RecentCityItem = styled.div`
     margin-left: 20px;
   }
   & > label > span::after {
-    content: "°C";
+    content: '°C';
     font-size: 15px;
     font-weight: bold;
     /* margin-left: 20px; */
@@ -81,10 +87,12 @@ export const RecentCityItem = styled.div`
 export const DetailsDiv = styled.div`
   display: flex;
   flex-direction: column;
-
-  width: 80%;
-  /* flex-flow: column wrap; */
+  border: 1px solid;
+  flex-grow: 1;
+  /* flex-shrink: 1; */
+  flex-basis: 70%;
   & > label {
+    /* flex-wrap: wrap; */
     font-size: 30px;
     font-weight: bold;
     margin: 10px;
