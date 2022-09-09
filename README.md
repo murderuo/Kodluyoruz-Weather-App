@@ -18,3 +18,6 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 login username and password: admin
+
+
+[https://kodluyoruz-weather-app.netlify.app/login](LIVE)
