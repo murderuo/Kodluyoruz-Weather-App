@@ -6,11 +6,12 @@ export const MainContaierDiv = styled.div`
   flex-wrap: wrap;
   margin: 0 auto;
   width: 70%;
+  height: auto;
   border: 1px solid;
   /* border-radius: 5px; */
   /* border-top-left-radius: 5%; */
   border-top-right-radius: 20%;
-  border-bottom-left-radius: 25%;
+  border-bottom-left-radius: 15%;
   /* border-bottom-right-radius: 5%; */
   /* background-color: black;
   color: white; */
@@ -100,6 +101,7 @@ export const DetailsDiv = styled.div`
   flex-grow: 1;
   /* flex-shrink: 1; */
   flex-basis: 70%;
+  align-content: center;
   & > label {
     /* flex-wrap: wrap; */
     font-size: 30px;
@@ -131,6 +133,8 @@ export const ListItemCardDiv = styled.div`
   & > span {
     font-weight: bold;
   }
+  /* & > img {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  } */
 `;
 
 export const PortalDiv = styled.div`

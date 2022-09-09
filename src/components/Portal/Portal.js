@@ -17,7 +17,7 @@ function Portal({ isOpen, setIsOpen, portalCity }) {
       setLocation(portalCity);
     }
     // eslint-disable-next-line
-  }, []);
+  }, [location]);
 
   if (!isOpen) return null;
   return createPortal(
