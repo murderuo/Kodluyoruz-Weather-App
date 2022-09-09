@@ -19,6 +19,7 @@ const WeatherContextProvider = ({ children }) => {
 
   useEffect(() => {
     locationValue.lon !== undefined && getData();
+    // eslint-disable-next-line
   }, [locationValue]);
 
   const value = { daysData, setDaysData };

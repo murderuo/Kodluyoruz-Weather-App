@@ -11,7 +11,7 @@ const LocationContextProvider = ({ children }) => {
     const response = await axios.get(
       `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=ec7d1c0e712571e97e77329fca7e15f3`,
     );
-    console.log(response.data);
+    // console.log(response.data);
     const data = await response.data[0];
     // data.name.toLowerCase() === location.toLowerCase() &&
     //   setLocationValue({
@@ -35,6 +35,7 @@ const LocationContextProvider = ({ children }) => {
   useEffect(() => {
     location !== '' && getLocation();
     // getLocation();
+    // eslint-disable-next-line
   }, [location]);
 
   const value = { location, setLocation, locationValue, setLocationValue };

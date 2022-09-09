@@ -7,7 +7,6 @@ import {
   InputDiv,
   ListItemDiv,
   MainContaierDiv,
-  PortalDiv,
   RecentCityItem,
   RecentCityList,
 } from './StyledComp';
