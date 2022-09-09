@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 * {
-    padding: 0;
-    box-sizing: border-box;
-    margin: 0 ;
-    /* background-color: #EEE3CB ; */
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif !important;
+  /* background-image: url('https://www.w3schools.com/css/img_forest.jpg'); */
+  /* background-repeat: no-repeat; */
+  /* background-color: #EEE3CB ; */
 }

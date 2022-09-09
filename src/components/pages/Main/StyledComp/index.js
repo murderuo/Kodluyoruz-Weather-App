@@ -7,7 +7,15 @@ export const MainContaierDiv = styled.div`
   margin: 0 auto;
   width: 70%;
   border: 1px solid;
-  background-color: #eee3cb;
+  /* border-radius: 5px; */
+  /* border-top-left-radius: 5%; */
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 25%;
+  /* border-bottom-right-radius: 5%; */
+  /* background-color: black;
+  color: white; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 `;
 
 export const CitysDiv = styled.div`
@@ -20,7 +28,8 @@ export const CitysDiv = styled.div`
   /* flex-shrink: 0; */
   /* flex-wrap: wrap; */
   padding: 5px;
-  border: 1px solid;
+  /* border: 1px solid; */
+  border-right: 1px solid;
 `;
 
 export const InputDiv = styled.div`
@@ -87,7 +96,7 @@ export const RecentCityItem = styled.div`
 export const DetailsDiv = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid;
+  /* border: 1px solid; */
   flex-grow: 1;
   /* flex-shrink: 1; */
   flex-basis: 70%;
@@ -119,6 +128,9 @@ export const ListItemCardDiv = styled.div`
   flex: 1;
   padding: 5px;
   text-align: center;
+  & > span {
+    font-weight: bold;
+  }
 `;
 
 export const PortalDiv = styled.div`
