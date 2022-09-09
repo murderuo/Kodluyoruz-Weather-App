@@ -20,4 +20,4 @@ You may also see any lint errors in the console.
 login username and password: admin
 
 
-[LIVE VERSION](https://kodluyoruz-weather-app.netlify.app/login)
+[LIVE VERSION](https://kodluyoruz-weather-app.netlify.app/)
