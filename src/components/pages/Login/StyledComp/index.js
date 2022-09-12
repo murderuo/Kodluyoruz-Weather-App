@@ -32,6 +32,12 @@ export const InputDiv = styled.div`
   & > input {
     /* display: inline; */
     margin-left: auto;
-    width: 70%;
+    width: 60%;
+  }
+
+  @media (width: 400px) {
+    & > input {
+      width: 100%;
+    }
   }
 `;
