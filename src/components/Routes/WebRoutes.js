@@ -24,7 +24,7 @@ function WebRoutes() {
                 >
                   There is something wrong ! in
                   <br />
-                  ItemListener component..
+                  Main component..
                 </div>
               }
             >

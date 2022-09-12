@@ -23,9 +23,15 @@ export const InputDiv = styled.div`
   flex-direction: row;
   /* flex:1 ; */
   flex-wrap: wrap;
-  width:40%;
+  width: 30%;
   /* align-items: center; */
-  justify-content: space-between;
+  justify-content: flex-start;
   /* justify-content: right; */
   margin: 10px;
+
+  & > input {
+    /* display: inline; */
+    margin-left: auto;
+    width: 70%;
+  }
 `;

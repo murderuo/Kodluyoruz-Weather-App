@@ -30,7 +30,7 @@ export const CitysDiv = styled.div`
   /* flex-wrap: wrap; */
   padding: 5px;
   /* border: 1px solid; */
-  border-right: 1px solid;
+  /* border-right: 1px solid; */
 `;
 
 export const InputDiv = styled.div`
@@ -102,6 +102,7 @@ export const DetailsDiv = styled.div`
   /* flex-shrink: 1; */
   flex-basis: 70%;
   align-content: center;
+  border-left: 1px solid;
   & > label {
     /* flex-wrap: wrap; */
     font-size: 30px;
